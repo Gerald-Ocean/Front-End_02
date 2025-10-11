@@ -1,0 +1,16 @@
+/* TAG SELECTOR */
+h1, p {
+    font-style: italic;
+}
+
+/* ID SELECTOR */
+#span_1 {
+    font-size: 100px;
+}
+
+/* CLASS SELECTOR menyimpan dekorasi yang reusable */
+.text-warning{
+    background-color: orange;
+    color: white;
+    font-weight: 100px;
+}

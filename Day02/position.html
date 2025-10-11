@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: Position</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        #container {
+            width: 70vw;
+            min-height: 200vh;
+            border: 2px solid black;
+            margin: 20px auto;
+        }
+
+        #container > div {
+            width: 300px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="Static" style=" position: relative;
+        top: -10px"> 
+            <h2> Position : Static</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. 
+                Temporibus dolores harum minus architecto tempore delectus? Eum, officia nemo mollitia hic culpa nam inventore a veritatis, 
+                aliquam voluptas recusandae dolor veniam?
+            </p>
+        </div>
+    </div>
+        <div id="container">
+        <div id="Relative" style=
+        "background-color: aqua; 
+        position: relative; 
+        top: -20px; 
+        left: 20px"> 
+            <h2> Position : Relative</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. 
+                Temporibus dolores harum minus architecto tempore delectus? Eum, officia nemo mollitia hic culpa nam inventore a veritatis, 
+                aliquam voluptas recusandae dolor veniam?
+            </p>
+        </div>
+    </div>
+    <div id="container">
+        <div id="Absolute" 
+        style=
+        "background-color: orange; 
+        position: absolute;"> 
+            <h2> Position : Absolute</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. 
+                Temporibus dolores harum minus architecto tempore delectus? Eum, officia nemo mollitia hic culpa nam inventore a veritatis, 
+                aliquam voluptas recusandae dolor veniam?
+                </p>
+          <div id="Fixed" style=
+        "background-color: red; 
+        position:fixed;
+        right: 0px;
+        bottom: 0px;"> 
+            <h2> Position : Fixed</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. 
+                Temporibus dolores harum minus architecto tempore delectus? Eum, officia nemo mollitia hic culpa nam inventore a veritatis, 
+                aliquam voluptas recusandae dolor veniam?
+            </p>
+          <div id="Sticky" 
+        style=
+        "background-color: greenyellow; 
+        position: sticky;
+        top: 50px;
+        "> 
+            <h2> Position : sticky</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. 
+                Temporibus dolores harum minus architecto tempore delectus? Eum, officia nemo mollitia hic culpa nam inventore a veritatis, 
+                aliquam voluptas recusandae dolor veniam?
+                </p>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: Media Query</title>
+    <style>
+        h1 {
+            color: blueviolet;
+        }
+        /* Small Screen */
+        @media screen  and (max-width: 480px) {
+            /*  */
+            .text-sm-red {
+                color: red;
+            }
+        }
+          /* Medium Screen */ 
+        @media screen and (min-width: 481px)  and (max-width: 768px) {
+            /*  */
+            .text-md-blue {
+                color: blue;
+            }
+        }
+            /* Large Screen */
+        @media screen and (min-width: 769px)  and (max-width: 1440px) {
+            /*  */
+            .text-lg-orange {
+                color: orange;
+            }
+        }
+    </style>
+</head>
+<body>
+   <h1 class="text-sm-red text-md-blue text-lg-orange"> Try Media Screen</h1> </h1> 
+</body>
+</html>

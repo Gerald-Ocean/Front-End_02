@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro DOM</title>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <input id="input-text" type="text" placeholder="Input value" />
+
+    <button type="button" onclick="updateText()">Update Text</button>
+    <hr />
+    <!-- Calculator -->
+     <h2> Calculator </h2>
+     <input id="num1" type="number" placeholder="Angka 1" />
+     <input id="num2" type="number" placeholder="Angka 2" />
+     <br><br>
+     <button onclick="calculate('+')">+</button>
+     <button onclick="calculate('-')">-</button>
+     <button onclick="calculate('*')">*</button>
+     <button onclick="calculate('/')">/</button>
+     <br><br>
+     <div id="result">Hasil: </div>
+     <hr />
+     
+     <!-- Name List -->
+     <h2>Daftar Nama</h2>
+     <input id="name-input" type="text" placeholder="Masukkan nama" />
+     <button onclick="addName()">Tambah Nama</button>
+     <br><br>
+     <ol id="name-list"></ol>    
+</body>
+<!-- <script> untuk menyiapkan fungsi javascript pada html -->
+<script>
+    document.getElementById("title").innerText = "Original Text"
+    function updateText() {
+        // 1. Akses element html yg ingin dimanipulasi
+        const titleElement = document.getElementById("title");
+        console.log(titleElement);
+        const inputElement = document.getElementById("input-text");
+        // 2. Manipulasi property dari element yg diakses
+        // bedanya textContent / innerText = bertujuan mengganti konten tulisan yg ada pada element HTML
+      titleElement.textContent = inputElement.value;
+        // innerHTML = bertujuan mengganti konten HTML didalam suatu element HTML (bisa ditambah element lain)
+       //  titleElement.innerHTML = "<i> Hello, DOM</i>";
+        titleElement.style.color = "red";
+        }
+        function calculate(operation) {
+        const num1 = parseFloat(document.getElementById("num1").value);
+        const num2 = parseFloat(document.getElementById("num2").value);
+        let result;
+        
+        if (isNaN(num1) || isNaN(num2)) {
+            result = "Masukkan angka yang valid";
+        } else {
+            switch(operation) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num2 !== 0 ? num1 / num2 : "Tidak bisa dibagi nol";
+                    break;
+            }
+        }
+        
+        document.getElementById("result").innerText = "Hasil: " + result;
+}
+
+function addName() {
+    const nameInput = document.getElementById("name-input");
+    const nameList = document.getElementById("name-list");
+    
+    if (nameInput.value.trim() !== "") {
+        const listItem = document.createElement("li");
+        listItem.textContent = nameInput.value;
+        nameList.appendChild(listItem);
+        nameInput.value = "";
+    }
+    
+} 
+</script>
+</html>
