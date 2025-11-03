@@ -1,8 +1,16 @@
+import { Metadata } from "next";
+import { title } from "process";
 import * as React from "react";
 
 interface ISignUpLayoutProps {
   children: React.ReactNode; // merepresentasikan bahwa props children membawa data dalam bentuk component react
 }
+
+export const metadata: Metadata = {
+title:"Dash-App | Sign Up",
+description: "Dash-App"
+};
+
 
 const SignUpLayout: React.FunctionComponent<ISignUpLayoutProps> = (props) => {
   return (

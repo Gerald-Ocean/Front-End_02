@@ -31,7 +31,7 @@ const BlogsPage: React.FunctionComponent<IAppProps> = (props) => {
     const printData = () => {
         return data.map((value: any, index) => (
             <div key={`${value.title}-${index}`} className="p-2 border rounded-md">
-                <Link href={`/${value.title}`}>
+                <Link href={`/blogs/${value.title}`}>
                 <h2 className="font-bold">{value.title}</h2>
                 </Link>
             </div>

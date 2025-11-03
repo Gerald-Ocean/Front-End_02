@@ -30,8 +30,10 @@ const DetailBlog: React.FunctionComponent<IDetailBlogProps> = async (
     return (
         <div>
             <h1 className="text-4xl">
-                Detail Page <span>{params.title}</span>
+                Detail Page 
             </h1>
+            <h2 className="text-2xl font-bold">{detail.title}</h2>
+            <p>{detail.body}</p>
         </div>
     );
 };
